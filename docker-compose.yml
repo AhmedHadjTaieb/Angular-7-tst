@@ -1,0 +1,14 @@
+version: "2"
+services:
+  web:
+    container_name: angular7-dev
+    build: .
+    restart: always
+    command: ng serve --port 6200 --host 0.0.0.0
+    ports:
+      - 6200:6200
+    user: ${CURRENT_UID}
+    volumes:
+      - .:/home/angular
+      - /home/angular/node_modules
+    tty: true

@@ -1,0 +1,10 @@
+version: "2"
+services:
+  web:
+    container_name: angular7-prod
+    build: .
+    restart: always
+    ports:
+      - 4000:80
+    volumes:
+      - ./dist:/var/www/html

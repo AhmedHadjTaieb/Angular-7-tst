@@ -1,8 +1,0 @@
-web:
-  container_name: angular7-itg
-  build: .
-  ports:
-    - 6200:6200
-  volumes:
-    - ../../:/usr/src/app
-    - /usr/src/app/node_modules/
