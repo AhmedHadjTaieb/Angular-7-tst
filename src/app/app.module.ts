@@ -1,7 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { FormsModule } from '@angular/forms'; 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./header/header.component";
@@ -13,7 +13,6 @@ import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
 import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-edit.component";
 
 @NgModule({
-<<<<<<< HEAD
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -24,11 +23,7 @@ import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-ed
     ShoppingListComponent,
     ShoppingEditComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
-=======
-  declarations: [AppComponent, ServerComponent, ServersComponent],
-  imports: [BrowserModule, AppRoutingModule,FormsModule,ReactiveFormsModule],
->>>>>>> f985d337d3a2d1609a37c29ffb380cb3ff44f91a
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
