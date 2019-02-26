@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, EventEmitter, Output } from "@angular/core";
 import { Recipe } from "../recipe.model";
+import { RecipesService } from "../recipes.service";
 
 @Component({
   selector: "app-recipes-list",
@@ -7,19 +8,10 @@ import { Recipe } from "../recipe.model";
   styleUrls: ["./recipes-list.component.scss"]
 })
 export class RecipesListComponent implements OnInit {
-  recipes: Recipe[] = [
-    new Recipe(
-      "A test Recipe",
-      "Simple Test",
-      "http://downloads.bbc.co.uk/skillswise/entry12/english/en05skim/images/en05skim-e2-w-scanning-a-recipe-tikka-masala-592x838.jpg"
-    ),
-    new Recipe(
-      "A test Recipe",
-      "Simple Test",
-      "http://downloads.bbc.co.uk/skillswise/entry12/english/en05skim/images/en05skim-e2-w-scanning-a-recipe-tikka-masala-592x838.jpg"
-    )
-  ];
-  constructor() {}
+  recipes: Recipe[] = [];
+  constructor(private recipesService: RecipesService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.recipes = this.recipesService.getRecipes();
+  }
 }
